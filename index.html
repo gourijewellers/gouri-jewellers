@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Gouri Jewellers Kolkata | Exquisite Traditional & Modern Jewellery</title>
+    <meta name="description" content="Discover the finest traditional and contemporary jewellery at Gouri Jewellers Kolkata. Specializing in intricate filigree, openwork, and bespoke gold ornaments.">
+    <meta name="keywords" content="Gouri Jewellers, Kolkata Jewellery, Gold Bangles, Filigree Jewellery, Traditional Gold, Bridal Jewellery, Custom Ornaments">
+    <meta name="author" content="Gouri Jewellers">
+    
+    <style>
+        /* CSS Styling */
+        :root {
+            --primary-color: #111111;
+            --gold: #D4AF37;
+            --gold-light: #F3E5AB;
+            --text-light: #f4f4f4;
+            --text-dark: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: var(--gold-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            font-weight: normal;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 1.8rem;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+       /* Hero Banner */
+        #home {
+            height: 120vh;
+            /* Replace 'my-banner.jpg' below with the actual name of your image file */
+            background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url('GJ Banner.jpeg') center top/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--gold);
+            padding: 0 20px;
+        }
+
+        #home h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 10px auto 0;
+        }
+
+        /* Heritage Page */
+        #heritage {
+            background-color: #111111;
+        }
+
+        .heritage-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        /* Products Page */
+        #products {
+            background-color: #0a0a0a;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* WhatsApp Button */
+        .wa-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: none;
+            width: 100%;
+        }
+
+        .wa-btn:hover {
+            background-color: #128C7E;
+        }
+
+        /* Contact Page */
+        #contact {
+            background-color: #111111;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Add a hamburger menu for mobile in production */
+            }
+            #home h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home" class="logo">GOURI JEWELLERS</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#heritage">Our Heritage</a></li>
+            <li><a href="#products">Collections</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fancy Home Banner -->
+    <header id="home">
+        <h1>Gouri Jewellers Kolkata</h1>
+        <p>Elegance crafted in gold. Discover our exclusive traditional and modern artistry, Jewellery Customization is our Speciality.</p>
+    </header>
+
+    <!-- Heritage Section -->
+    <section id="heritage">
+        <h2 class="section-title">Our Heritage</h2>
+        <div class="heritage-content">
+            <p>Rooted in the cultural heart of Kolkata, Gouri Jewellers stands as a testament to unparalleled craftsmanship and artistry. For generations, we have dedicated ourselves to the mastery of intricate jewelry design. We specialize in preserving traditional styles, bringing to life breathtaking filigree, exquisite openwork, and timeless gold ornaments that celebrate life's most precious moments.</p>
+            <br>
+            <p>Every piece in our collection is more than an accessory; it is a meticulously designed legacy passed down from our artisans to your family.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2 class="section-title">Exclusive Collections</h2>
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="8.jpeg" alt="Blue Bead Necklace with Gold Lotus" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Sapphire Hue Lotus Choker</h3>
+                    <button class="wa-btn" onclick="openWhatsApp('Sapphire Hue Lotus Choker (Ref: 8.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="9.jpeg" alt="Pearl Multi-strand Necklace" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Layered Pearl Floral Necklace</h3>
+                    <button class="wa-btn" onclick="openWhatsApp('Layered Pearl Floral Necklace (Ref: 9.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="1.jpeg" alt="Green Bead Necklace" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Emerald Hue Clover Necklace</h3>
+                    <button class="wa-btn" onclick="openWhatsApp('Emerald Hue Clover Necklace (Ref: 1.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="2.jpeg" alt="Red Bead Necklace" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Ruby Hue Sunburst Necklace</h3>
+                    <button class="wa-btn" onclick="openWhatsApp('Ruby Hue Sunburst Necklace (Ref: 2.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="4.jpeg" alt="Traditional Gold Earrings" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Classic Filigree Danglers</h3>
+                    <button class="wa-btn" onclick="openWhatsApp('Classic Filigree Danglers (Ref: 4.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="3.jpeg" alt="Assorted Gold Rings" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Traditional Gold Ring Collection</h3>
+                    <button class="wa-btn" onclick="openWhatsApp('Traditional Gold Ring Collection (Ref: 3.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <img src="7.jpeg" alt="Assorted Gold Earrings Box 1" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Artisan Earring Showcase I</h3>
+                    <button class="wa-btn" onclick="openWhatsApp('Artisan Earring Showcase I (Ref: 7.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <img src="6.jpeg" alt="Assorted Gold Earrings Box 2" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Artisan Earring Showcase II</h3>
+                    <button class="wa-btn" onclick="openWhatsApp('Artisan Earring Showcase II (Ref: 6.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+
+   <!-- Product 9 -->
+<div class="product-card">
+                <img src="5.jpeg" alt="Light Weight Pearl Chokers" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Light Weight Pearl Chokers</h3>
+                    
+                    <button class="wa-btn" onclick="openWhatsApp('Light Weight Pearl Bead Chokers (Ref: 5.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+<!-- Product 10 -->
+<div class="product-card">
+                <img src="11.jpeg" alt="Light Weight Earrings" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Light Weight Danglers</h3>
+                    
+                    <button class="wa-btn" onclick="openWhatsApp('Light Weight Danglers (Ref: 11.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+<!-- Product 11 -->
+<div class="product-card">
+                <img src="12.jpeg" alt="Light Weight Earrings" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Light Weight Earrings</h3>
+                    
+                    <button class="wa-btn" onclick="openWhatsApp('Light Weight Danglers (Ref: 12.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+<!-- Product 12 -->
+<div class="product-card">
+                <img src="13.jpeg" alt="Deer Heeran Mukhi Nakashi Bangle" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Hiran Mukh Nakashi Bangle</h3>
+                    
+                    <button class="wa-btn" onclick="openWhatsApp('Heran Mukhi Nakashi Bangle (Ref: 13.jpeg)')">Inquire on WhatsApp</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Visit Us</h2>
+        <div class="contact-info">
+            <p><strong>Gouri Jewellers</strong></p>
+            <p>167B, B.B.Ganguly Street,Kolkata - 700014, West Bengal, India</p>
+            <p>Email: gourijewellerskolkata@gmail.com</p>
+            <br>
+            <p>Have a custom design in mind? Reach out to us directly to bring your vision to life.</p>
+        </div>
+ <br>
+            <button class="wa-btn" style="width: auto; padding: 12px 30px; font-size: 1.1rem;" onclick="openWhatsApp('General Inquiry or Custom Design')">Chat with us on WhatsApp</button>
+        </div>
+   
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Gouri Jewellers Kolkata. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for WhatsApp Functionality and Smooth Scrolling -->
+    <script>
+        // Replace with your actual business WhatsApp number (include country code, no '+', no spaces)
+        const businessWhatsAppNumber = "+919831462242"; 
+
+        function openWhatsApp(productName) {
+            // Encode the message to ensure spaces and special characters format correctly in the URL
+            const message = encodeURIComponent(`Hello Gouri Jewellers! I am interested in purchasing or learning more about this product: ${productName}. Could you please provide details?`);
+            
+            // Construct the WhatsApp API URL
+            const whatsappUrl = `https://wa.me/${businessWhatsAppNumber}?text=${message}`;
+            
+            // Open in a new tab
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
